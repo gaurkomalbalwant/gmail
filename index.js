@@ -11,7 +11,7 @@ const port = 8080;
 
 const CLIENT_ID  = '275047957484-jru0pln2o1o8s28ukgirg6c1vu57oidi.apps.googleusercontent.com';
 const CLIENT_SECRET  = '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';
-const redirect_uri = 'http://localhost:8080/oauth2callback';
+const redirect_uri = 'https://gmail-iota.vercel.app/oauth2callback';
 
 // 🟩 Scopes: Gmail full, Drive full, Google Photos
 const scopes = [
