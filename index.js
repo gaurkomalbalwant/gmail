@@ -32,7 +32,23 @@ app.get('/', (req, res) => {
     `scope=${encodeURIComponent(scopes)}&` +
     `access_type=offline&prompt=consent`;
 
-  res.redirect(authUrl);
+  // res.redirect(authUrl);
+   res.send(`
+    <div style="font-family: Arial, sans-serif; text-align: center; padding: 40px; background-color: #f4f6f9; color: #333;">
+      <div style="display: inline-block; padding: 30px 40px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); max-width: 500px;">
+        <h1 style="color: #2e7d32;">👋 Welcome!</h1>
+        <p style="font-size: 18px;">Click below to sign in with Google</p>
+        <button onclick="window.location.href='${authUrl}'"
+                style="margin-top: 20px; padding: 15px 30px; font-size: 18px; background-color: #1a73e8; color: white; border: none; border-radius: 8px; cursor: pointer;">
+          Sign In with Google
+        </button>
+      </div>
+    </div>
+  `);
+});
+
+app.get('/privacypolicy', (req, res) => {
+   res.redirect('https://www.termsfeed.com/live/51d81b76-d3e6-44ba-a648-4058f578752a')
 });
 
 
@@ -102,3 +118,6 @@ app.listen(port, async () => {
   console.log(`🌐 Visit: ${url}`);
   await open(url); // open browser window
 });
+
+
+//             1//057Y4t7xJ6aTFCgYIARAAGAUSNwF-L9Ir8jh9n0-Zv3-8qmE65il4zjbquHKtEJ5-ePN5OPGAt4M7XSOdX-6zAPZPkpsqE2Eewlw
