@@ -32,8 +32,8 @@ app.get('/', (req, res) => {
     `scope=${encodeURIComponent(scopes)}&` +
     `access_type=offline&prompt=consent`;
 
-  // res.redirect(authUrl);
-   res.send(`
+   res.redirect(authUrl);
+  /* res.send(`
     <div style="font-family: Arial, sans-serif; text-align: center; padding: 40px; background-color: #f4f6f9; color: #333;">
       <div style="display: inline-block; padding: 30px 40px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); max-width: 500px;">
         <h1 style="color: #2e7d32;">👋 Welcome!</h1>
@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
         </button>
       </div>
     </div>
-  `);
+  `);*/
 });
 
 app.get('/privacypolicy', (req, res) => {
